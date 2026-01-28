@@ -19,7 +19,7 @@ SEXP mfdr_gaussian(SEXP fit) {
   double *gm = REAL(getListElement(fit, "group.multiplier"));  
   double *lambda = REAL(getListElement(fit, "lambda"));
   double *df = REAL(getListElement(fit, "df"));
-  double *RSS = REAL(getListElement(fit, "loss"));
+  double *RSS = REAL(getListElement(fit, "deviance"));
   double alpha = REAL(getListElement(fit, "alpha"))[0];
   double tauSq;
   SEXP EF;

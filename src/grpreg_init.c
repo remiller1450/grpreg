@@ -32,7 +32,6 @@ static const R_CallMethodDef CallEntries[] = {
   {"mfdr_gaussian",            (DL_FUNC) &mfdr_gaussian,             1},
   {"mfdr_binomial",            (DL_FUNC) &mfdr_binomial,             1},
   {"mfdr_cox",                 (DL_FUNC) &mfdr_cox,                  1},
-  {"standardize",              (DL_FUNC) &standardize,               1},
   {NULL, NULL, 0}
 };
 
