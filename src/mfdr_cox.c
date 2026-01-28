@@ -65,9 +65,9 @@ SEXP mfdr_cox (SEXP fit) {
   }
   
   // Return
-  Free(w);
-  Free(haz);
-  Free(rsk);
+  free(w);
+  free(haz);
+  free(rsk);
   UNPROTECT(1);
   return(EF);
 }
