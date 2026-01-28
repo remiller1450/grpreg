@@ -34,6 +34,17 @@ void R_init_grpreg(DllInfo *dll) {
   R_useDynamicSymbols(dll, FALSE);
 }
 
+// List accessor function
+SEXP getListElement(SEXP list, const char *str) {
+  SEXP elmt = R_NilValue, names = getAttrib(list, R_NamesSymbol);
+  for (int i = 0; i < length(list); i++)
+    if(strcmp(CHAR(STRING_ELT(names, i)), str) == 0) {
+      elmt = VECTOR_ELT(list, i);
+      break;
+    }
+  return elmt;
+}
+
 // Cross product of the jth column of x with y
 double crossprod(double *x, double *y, int n, int j) {
   double val = 0;
